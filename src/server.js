@@ -1,7 +1,7 @@
 require('dotenv').config();
 const app = require('./app');
 
-const port = process.env.SERVER_PORT || 3001;
+const port = process.env.SERVER_PORT;
 
 app.get('/', (_req, res) => {
   res.status(200).json({ message: 'Hello World!' });
