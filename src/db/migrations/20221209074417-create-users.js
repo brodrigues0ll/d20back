@@ -31,11 +31,11 @@ module.exports = {
       },
       password: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       role: {
         type: Sequelize.STRING,
-        defaultValue: 'user',
+        defaultValue: 'player',
         allowNull: true,
       }
     });
