@@ -10,4 +10,13 @@ const configDev = {
 
 };
 
-module.exports = configDev;
+const configTest = {
+  username: 'root',
+  password: 'AOBA123',
+  port: 3306,
+  database: 'TESTANDO_CARAIO',
+  host: 'localhost',
+  dialect: 'mysql',
+};
+
+module.exports = configTest;
