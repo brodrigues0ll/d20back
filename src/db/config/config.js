@@ -14,7 +14,7 @@ module.exports = {
     password: "123",
     database: "DB_TEST",
     host: "127.0.0.1",
-    port: 3306,
+    port: 4001,
     dialect: "mysql"
   },
   production: {
