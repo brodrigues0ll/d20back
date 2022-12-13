@@ -4,6 +4,8 @@ const express = require('express');
 
 const createUser = express.Router();
 
+const JWT = require('jsonwebtoken');
+
 const { User } = require('../db/models');
 
 createUser.get('/', (req, res) => {
@@ -26,7 +28,17 @@ createUser.post('/', async (req, res) => {
 
   });
 
-  return res.status(201).send({ user });
+  const token = JWT.sign({
+    data: {
+      id: user.id,
+      name: user.name,
+      last_name: user.last_name,
+      username: user.username,
+      email: user.email,
+    },
+  }, process.env.JWT_SECRET);
+
+  return res.status(201).send({ token });
 });
 
 module.exports = createUser;

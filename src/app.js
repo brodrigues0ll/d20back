@@ -8,10 +8,13 @@ app.use(cors());
 
 
 const register = require('./routes/register');
+const login = require('./routes/login');
 
 
 app.use(express.json());
 
 app.use('/register', register);
+
+app.use('/login', login);
 
 module.exports = app;
